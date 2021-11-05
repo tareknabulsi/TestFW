@@ -1,0 +1,45 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TestFW
+import Foundation
+import MediaPlayer
+import Swift
+@_exported import TestFW
+import UIKit
+import _Concurrency
+extension Swift.String {
+  public var stringFromHexString: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class eDynamoController : TestFW.MTDataViewerViewController, UIKit.UIActionSheetDelegate, UIKit.UIDocumentPickerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc public func documentPickerWasCancelled(_ controller: UIKit.UIDocumentPickerViewController)
+  @_Concurrency.MainActor(unsafe) @objc public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentAt url: Foundation.URL)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc override public func onDeviceConnectionDidChange(_ deviceType: Swift.UInt, connected: Swift.Bool, instance: Any!)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class MTDataViewerViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate, TestFW.MTSCRAEventDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func cardSwipeDidGetTransError()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func setText(text: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc public func onDisplayMessageRequest(_ data: Foundation.Data!)
+  @_Concurrency.MainActor(unsafe) @objc public func onEMVCommandResult(_ data: Foundation.Data!)
+  @_Concurrency.MainActor(unsafe) @objc public func onUserSelectionRequest(_ data: Foundation.Data!)
+  @_Concurrency.MainActor(unsafe) @objc public func onARQCReceived(_ data: Foundation.Data!)
+  @_Concurrency.MainActor(unsafe) @objc public func onTransactionStatus(_ data: Foundation.Data!)
+  @_Concurrency.MainActor(unsafe) @objc public func onDeviceConnectionDidChange(_ deviceType: Swift.UInt, connected: Swift.Bool, instance: Any!)
+  @_Concurrency.MainActor(unsafe) @objc public func onDeviceResponse(_ data: Foundation.Data!)
+  @_Concurrency.MainActor(unsafe) @objc public func onDataReceived(_ cardDataObj: TestFW.MTCardData!, instance: Any!)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc public func onDeviceError(_ error: Swift.Error!)
+  @_Concurrency.MainActor(unsafe) @objc public func deviceNotPaired()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
